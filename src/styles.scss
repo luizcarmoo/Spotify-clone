@@ -11,3 +11,12 @@ html, body {
   padding: 0;
   background-color: $bg-color;
 }
+
+.flex {
+  display: flex;
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+}
