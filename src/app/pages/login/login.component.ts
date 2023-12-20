@@ -12,7 +12,15 @@ export class LoginComponent implements OnInit {
   constructor(private spotifyService: SpotifyService) { }
 
   ngOnInit(): void {
-      
+    this.checkTokenUrlCallback();
+  }
+
+  checkTokenUrlCallback() {
+    const token = this.spotifyService.getTokenUrlCallback();
+    if(!!token){
+      this.spotifyService.defineAccessToken(token);
+    }
+
   }
 
   openLoginPage() {
